@@ -2,6 +2,8 @@
 const http = require('http')
 const push = require('./push')
 
+const PORT = process.env.PORT || 3333;
+
 // Create HTTP Server
 http.createServer( (request, response) => {
 
@@ -59,4 +61,4 @@ http.createServer( (request, response) => {
 }
 
 // Start the Server
-}).listen( 3333, () => { console.log('Server Running') })
+}).listen( PORT, () => { console.log('Server Running') })
