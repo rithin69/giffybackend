@@ -47,7 +47,9 @@ http.createServer((request, response) => {
 
   // Not Found
   } else {
-    response.statusCode = 404;
+    response.writeHead(404, {
+      'Content-Type': 'text/plain'
+    });
     response.end('Error: Unknown Request');
   }
 
